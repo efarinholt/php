@@ -1,32 +1,25 @@
 <?php
 
-//the class
-class pdoInstert{
+class pdoInstert{ // define class name
 	
-	//make connection
-	
-	public function instertRecord($user_email, $user_first, $user_last, $user_username, $user_password, $user_pin, $user_status, $user_timestamp){
+	public function instertRecord($user_email, $user_first, $user_last){ // define function name and expected incoming parameters
 			
-		$st = $this->db->prepare(
+		$st = $this->db->prepare( // sql insert query, which defines the table name and field names that will recieve the content
 			"INSERT INTO tbl_users 
-			(user_email, user_first, user_last, user_username, user_password, user_pin, user_status, user_timestamp) 
+			(user_email, user_first, user_last) 
 			VALUES 
-			(?,?,?,?,?,?,?,NOW())"
+			(?,?,?)"
 		);
-		$st->bindParam(1, $user_email);
+		// bind parameters to the anonymized insert values
+		$st->bindParam(1, $user_email); 
 		$st->bindParam(2, $user_first);
 		$st->bindParam(3, $user_last);
-		$st->bindParam(4, $user_username);
-		$st->bindParam(5, $user_password);
-		$st->bindParam(6, $user_pin);
-		$st->bindParam(7, $user_status);
-		$st->execute();
+		$st->execute(); // execute the insert
 			
 	}
 }
 
-//the call
-$object = new pdoInstert();
-$object->instertRecord($user_email, $user_first, $user_last, $user_username, $user_password, $user_pin, $user_status, $user_timestamp);
+$object = new pdoInstert(); // call the class name
+$object->instertRecord($user_email, $user_first, $user_last); // call the function and define the variables to insert
 
 ?>

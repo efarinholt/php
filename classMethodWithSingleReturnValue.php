@@ -1,7 +1,7 @@
 <?php
 
 class myClass{ // define class name
-	public function myFunction($x){ // define function name and expected incoming parameter
+	public function myFunction($x){ // define function name and the expected incoming parameter
 		
 		// conditions of function
 		if($x == 'a'){

@@ -1,6 +1,6 @@
 <?php
 
-//The Class
+//define the class
 class className{
 	public function myFunction($var1, $var2){
 		
@@ -15,7 +15,7 @@ class className{
 	}
 }
 
-//The Call
+//call the function
 $object = new className();
 list($return_1, $return_2) = $object->checkUser($var1, $var2);
 

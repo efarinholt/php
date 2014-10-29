@@ -14,7 +14,7 @@ class pdoInstert{ // define class name
 		$st->bindParam(1, $user_email); 
 		$st->bindParam(2, $user_first);
 		$st->bindParam(3, $user_last);
-		$st->execute(); // execute the insert
+		$st->execute(); // execute the sql insert
 			
 	}
 }

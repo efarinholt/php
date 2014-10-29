@@ -1,10 +1,10 @@
 <?php
-function randString($length = 6) {
-	$stringChars = '0123456789';
+function randString($length = 6) { // define function and set length as variable
+	$stringChars = '0123456789'; // random string will call from this list of characters
 	$randString = '';
 	for ($i = 0; $i < $length; $i++) {
-		$randString .= $stringChars[rand(0, strlen($stringChars) - 1)];
+		$randString .= $stringChars[rand(0, strlen($stringChars) - 1)]; // loop through characters and construct string
 	}
-	return $randString;
+	return $randString; // return the randomized string
 }
 ?>

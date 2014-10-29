@@ -11,12 +11,12 @@ class className{
 			$return1 = 'ccc';
 			$return2 = 'ddd';
 		}
-		return array($return1, $return2);		
+		return array($return_1, $return_2);		
 	}
 }
 
 //The Call
 $object = new className();
-list($return1, $return2) = $object->checkUser($var1, $var2);
+list($return_1, $return_2) = $object->checkUser($var1, $var2);
 
 ?>

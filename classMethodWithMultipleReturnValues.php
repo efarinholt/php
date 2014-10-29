@@ -4,7 +4,7 @@ class className{//define the class name
 	public function myFunction($var1, $var2){//define function and expected incoming parameters
 		
 		//conditions of function
-		if($x){
+		if($var1 == '111' && $var2 == '222'){
 			$return1 = 'aaa';
 			$return2 = 'bbb';
 		}else{

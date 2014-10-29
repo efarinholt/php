@@ -1,9 +1,9 @@
 <?php
 
-//define the class
-class className{
-	public function myFunction($var1, $var2){
+class className{//define the class name
+	public function myFunction($var1, $var2){//define function and expected incoming parameters
 		
+		//conditions of function
 		if($x){
 			$return1 = 'aaa';
 			$return2 = 'bbb';
@@ -11,12 +11,12 @@ class className{
 			$return1 = 'ccc';
 			$return2 = 'ddd';
 		}
-		return array($return_1, $return_2);		
+		return array($return_1, $return_2);//results to be returned when class method is called
 	}
 }
 
-//call the function
-$object = new className();
-list($return_1, $return_2) = $object->checkUser($var1, $var2);
+
+$object = new className();//call the function in later code
+list($return_1, $return_2) = $object->checkUser($var1, $var2);//assign return values to list variables
 
 ?>

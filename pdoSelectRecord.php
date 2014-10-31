@@ -1,5 +1,5 @@
 <?php	
-	require('pdoConnectionClass.php'); // connection class is required
+	require('pdoConnectionClass.php'); // connection class is required for pdo handler
 	
 	$st = $handler->prepare("SELECT * FROM tbl_users"); // select all records from the table 'tbl_users'
 	$st->bindColumn('user_first', $user_first); // bind the columns to variables

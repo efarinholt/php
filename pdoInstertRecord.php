@@ -1,6 +1,6 @@
 <?php
 
-require('pdoConnectionClass.php'); // connection class is required
+require('pdoConnectionClass.php'); // connection class is required for pdo handler
 
 class pdoInstert{ // define class name
 	

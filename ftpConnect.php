@@ -6,5 +6,6 @@ function ftpConnect($ftp_server, $ftp_user, $ftp_pass){
 	}else{
 		$connected = false;
 	}
+	return $connected;
 }
 ?>

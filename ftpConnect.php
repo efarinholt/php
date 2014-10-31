@@ -5,7 +5,6 @@ function ftpConnect($ftp_server, $ftp_user, $ftp_pass){
 		$connected = true;
 	}else{
 		$connected = false;
-		echo $conn_id;
 	}
 }
 ?>

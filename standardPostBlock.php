@@ -1,4 +1,5 @@
 <?php
+session_start(); // start the session - required whenever session variables are defined
 
 // user input variables have no value until form is submitted
 $user_name = '';

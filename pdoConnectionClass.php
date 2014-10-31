@@ -7,13 +7,13 @@ class Connection{ // define class name
 	}
 }
 
-class anotherClass{
-	// call within another class to establish connection
-	private $db;	
-	public function __construct(){
-		$this->db = new Connection();
-		$this->db = $this->db->dbConnect();
-	}
+try{//use pdo to catch errors
+	$handler = new Connection();
+	$handler = $handler->dbConnect();
+	$handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+	echo $e->getMessage();
+	die();
 }
 
 ?>

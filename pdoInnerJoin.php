@@ -26,7 +26,7 @@ class cl_UserEvaluation{
 		}catch(PDOException $e){
 			print $e->getMessage();
 		}
-	} // END fx_PdoSelect
+	} // END fx_PdoInnerJoin
 } // END cl_UserEvaluation
 
 $object = new cl_UserEvaluation(); // call the function in later code

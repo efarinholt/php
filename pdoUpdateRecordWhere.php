@@ -7,7 +7,7 @@ class cl_userUpdate{ // define class name
     	$this->db = new Connection();
     	$this->db = $this->db->dbConnect();
     }
-    function fx_pdoUpdate($user_email){ // define function name and expected incoming parameter
+    function fx_pdoUpdate($user_email, $user_first, $user_last, $user_phone){ // define function name and expected incoming parameter
         try{
             // update records that match the incoming variable
             $st = $handler->prepare("
@@ -26,4 +26,8 @@ class cl_userUpdate{ // define class name
         }
     } // END fx_pdoUpdate
 } // END cl_userUpdate
+
+$object = new cl_userUpdate(); // call the class name
+$object->fx_pdoUpdate($user_email, $user_first, $user_last, $user_phone);
+
 ?>

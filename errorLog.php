@@ -1,5 +1,5 @@
 <?php
-funciton logFile($user_email, $user_name, $user_phone){
+funciton fx_LogAction($user_email, $user_name, $user_phone){
     $add_to_log = "$user_email|$user_name|$user_phone\n"; // define contents of log entry
     $log_file = 'db_Log.txt'; // define log file location
     $fp = fopen($log_file, "a+"); // open log file

@@ -16,7 +16,7 @@ class cl_PdoInstert{ // define class name
 				VALUES 
 				(?,?,?)"
 			);
-			// bind parameters to the anonymized insert values from line 11
+			// bind parameters to the anonymized insert values
 			$st->bindParam(1, $user_email); 
 			$st->bindParam(2, $user_first);
 			$st->bindParam(3, $user_last);

@@ -25,7 +25,7 @@ class cl_userEval{
 	} // END fx_pdoSelect
 } // END cl_userEval
 
-$object = new userEval(); // call the function in later code
-list($user_first, $user_last, $user_email) = $object->pdoSelect($user_email); // assign return values to list variables
+$object = new cl_userEval(); // call the function in later code
+list($user_first, $user_last, $user_email) = $object->fx_pdoSelect($user_email); // assign return values to list variables
 	
 ?>

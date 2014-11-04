@@ -1,13 +1,13 @@
 <?php	
 require('pdoConnectionClass.php'); // connection class is required for pdo handler
 
-class cl_userEval{
+class cl_UserEvaluation{
 	private $db;
 	public function __construct(){
 		$this->db = new Connection();
 		$this->db = $this->db->dbConnect();
 	}
-	function fx_pdoSelect($user_email){ // define the function and expected incoming parameter
+	function fx_PdoSelect($user_email){ // define the function and expected incoming parameter
 		try {
 			// selects all records that match the incoming variable 
 			$st = $handler->prepare("SELECT * FROM tbl_users WHERE user_email = '$user_email'"); 
@@ -22,10 +22,10 @@ class cl_userEval{
 		}catch(PDOException $e){
 			print $e->getMessage();
 		}
-	} // END fx_pdoSelect
-} // END cl_userEval
+	} // END fx_PdoSelect
+} // END cl_UserEvaluation
 
-$object = new cl_userEval(); // call the function in later code
-list($user_first, $user_last, $user_email) = $object->fx_pdoSelect($user_email); // assign return values to list variables
+$object = new cl_UserEvaluation(); // call the function in later code
+list($user_first, $user_last, $user_email) = $object->fx_PdoSelect($user_email); // assign return values to list variables
 	
 ?>

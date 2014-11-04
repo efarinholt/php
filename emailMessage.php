@@ -1,5 +1,5 @@
 <?php
-function emailMessage($user_email, $user_phone, $admin_email){
+function fx_EmailMessage($user_email, $user_phone, $admin_email){
     // define email headers
     $headers .= 'From: FIS Admin <' . $admin_email . '>' . "\r\n"; 
     // define the content of the email

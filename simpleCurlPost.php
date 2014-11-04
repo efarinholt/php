@@ -1,6 +1,6 @@
 <?php
 
-function curlPost($user_email, $user_first, $user_last){
+function fx_CurlPost($user_email, $user_first, $user_last){
 	$fields = array( // define the fields that will be posted
 		"email" => rawurlencode($user_email),
 		"first_name" => rawurlencode($user_first),

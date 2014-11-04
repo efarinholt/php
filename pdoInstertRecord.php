@@ -2,13 +2,13 @@
 
 require('pdoConnectionClass.php'); // connection class is required for pdo handler
 
-class cl_pdoInstert{ // define class name
+class cl_PdoInstert{ // define class name
 	private $db;
 	public function __construct(){
 		$this->db = new Connection();
 		$this->db = $this->db->dbConnect();
 	}
-	public function fx_instertRecord($user_email, $user_first, $user_last){ // define function name and expected incoming parameters
+	public function fx_InstertRecord($user_email, $user_first, $user_last){ // define function name and expected incoming parameters
 		try {	
 			$st = $handler->prepare( // sql insert query, which defines the table name and field names that will recieve the content
 				"INSERT INTO tbl_users 
@@ -24,11 +24,11 @@ class cl_pdoInstert{ // define class name
 		}catch(PDOException $e){
 			print $e->getMessage();
 		}	
-	} // END fx_instertRecord
-} // END cl_pdoInstert
+	} // END fx_InstertRecord
+} // END cl_PdoInstert
 
 
-$object = new cl_pdoInstert(); // call the class name
-$object->fx_instertRecord($user_email, $user_first, $user_last); // call the function and define the variables to insert
+$object = new cl_PdoInstert(); // call the class name
+$object->fx_InstertRecord($user_email, $user_first, $user_last); // call the function and define the variables to insert
 
 ?>

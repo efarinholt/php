@@ -10,7 +10,7 @@ class cl_UserEvaluation{
 		try {
 			// selects all records that match the incoming variable
 			$st = $handler->prepare("
-				SELECT user_email
+				SELECT *
 				FROM table1
 				JOIN table2
 				ON table1.user_email=table2.user_email

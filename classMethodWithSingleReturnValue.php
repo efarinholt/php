@@ -1,7 +1,7 @@
 <?php
 
-class myClass{ // define class name
-	public function myFunction($x){ // define function name and the expected incoming parameter
+class cl_ExampleClass{ // define class name
+	public function fx_ExampleFunction($x){ // define function name and the expected incoming parameter
 		
 		// conditions of function
 		if($x == 'a'){
@@ -11,10 +11,11 @@ class myClass{ // define class name
 		}
 		
 		return $variable; // return a value
-	}
-}
+		
+	} // END fx_ExampleFunction
+} // END cl_ExampleClass
 
-$object = new myClass(); // call the class
-$variable = $object->myFunction($x); // call the function and get returned value
+$object = new cl_ExampleClass(); // call the class
+$variable = $object->fx_ExampleFunction($x); // call the function and get returned value
 
 ?>

@@ -28,7 +28,7 @@ class cl_pdoInstert{ // define class name
 } // END cl_pdoInstert
 
 
-$object = new pdoInstert(); // call the class name
-$object->instertRecord($user_email, $user_first, $user_last); // call the function and define the variables to insert
+$object = new cl_pdoInstert(); // call the class name
+$object->fx_instertRecord($user_email, $user_first, $user_last); // call the function and define the variables to insert
 
 ?>

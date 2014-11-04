@@ -2,6 +2,11 @@
 require('pdoConnectionClass.php'); // connection class is required for pdo handler
 
 class userEval{
+	private $db;
+	public function __construct(){
+		$this->db = new Connection();
+		$this->db = $this->db->dbConnect();
+	}
 	function pdoSelect($user_email){ // define the function and expected incoming parameter
 		try {
 			// selects all records that match the incoming variable 

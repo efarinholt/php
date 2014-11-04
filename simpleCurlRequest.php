@@ -1,6 +1,6 @@
 <?php
 
-function curlRequest($someVariable, $anotherVariable){
+function fx_CurlRequest($someVariable, $anotherVariable){
     $url_request = 'http://api.url.com?aaa=' . $someVariable . '&bbb=' . $anotherVariable;
     
     $curl = curl_init();

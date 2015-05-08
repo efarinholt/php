@@ -1,7 +1,11 @@
 <?php
 
 function fx_CurlPost($user_email, $user_first, $user_last){
-// function is defined which takes email, first name, and last name and passes it in a URL
+/* 
+a function is defined which takes email, first name, and last name and passes it in a 
+POST to a webservice, which will then return a response
+*/
+
 	$fields = array( 
 		"email" => rawurlencode($user_email),
 		"first_name" => rawurlencode($user_first),

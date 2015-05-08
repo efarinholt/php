@@ -35,11 +35,11 @@ POST to a webservice, which will then return a response
 	// curl is initiated with the $ch variable and below a number of options are set
 	
 	curl_setopt($ch, CURLOPT_URL, $post_url); 
-	// assign url to curl post
+	// assign the url we constructed above to the curl post
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 	// make sure a response is returned
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30); 
-	// set timeout before process is killed
+	// set timeout, after which the process is killed
 	
 	$result = curl_exec($ch); 
 	// execute curl post and set $result as the response variable

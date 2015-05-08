@@ -39,7 +39,7 @@ POST to a webservice, which will then return a response
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 	// make sure a response is returned
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30); 
-	// set timeout, after which the process is killed
+	// if the webservice doesn't return a response within this time period, the process is killed
 	
 	$result = curl_exec($ch); 
 	// execute curl post and set $result as the response variable

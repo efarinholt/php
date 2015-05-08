@@ -11,8 +11,10 @@ POST to a webservice, which will then return a response
 		"first_name" => rawurlencode($user_first),
 		"last_name" => rawurlencode($user_last)
 	);
-	// each field must be url encoded, so an array is set up with a key and value pair - 
-	// they key being the url parameter and the value is the encoded variable
+	/*
+	each field must be url encoded, so an array is set up with a key and value pair - 
+	they key being the url parameter and the value is the encoded variable
+	*/
 	
 	foreach($fields as $key => $value){ $fields_string .= $key . '=' . $value . '&';}
 	/* 

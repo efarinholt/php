@@ -1,27 +1,49 @@
 <?php
 
 function fx_CurlPost($user_email, $user_first, $user_last){
-	$fields = array( // define the fields that will be posted
+// function is defined which takes email, first name, and last name and passes it in a URL
+	$fields = array( 
 		"email" => rawurlencode($user_email),
 		"first_name" => rawurlencode($user_first),
 		"last_name" => rawurlencode($user_last)
 	);
+	// each field must be url encoded, so an array is set up with a key and value pair - 
+	// they key being the url parameter and the value is the encoded variable
 	
-	// loop through all fields and construct a url, separating each with an ampersand
 	foreach($fields as $key => $value){ $fields_string .= $key . '=' . $value . '&';}
+	/* 
+	we loop through the array above and construct the url - it will output like this:
+	email=evan@fireinspace.net&first_name=Evan&last_name=Farinholt&
+	*/
 	
-	$fields_string = substr($fields_string, 0, -1); // trim the last ampersand from the url
+	$fields_string = substr($fields_string, 0, -1); 
+	// the last '&' from the url must be removed
 	
-	$post_url = 'http://post.quantum3media.com/submit/form.php?' . $fields_string;
+	$post_url = 'http://evanfarinholt.com/api.php?' . $fields_string;
+	/*
+	now we have to add the url of our webservice, so the whole url will look like this:
+	http://evanfarinholt.com/api.php?email=evan@fireinspace.net&first_name=Evan&last_name=Farinholt
+	*/
 	
-	$ch = curl_init(); // initiate curl
-	curl_setopt($ch, CURLOPT_URL, $post_url); // assign url to curl post
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE); // make sure a response is returned
-	curl_setopt($ch, CURLOPT_TIMEOUT, 30); // set timeout
+	$ch = curl_init();
+	// curl is initiated with the $ch variable and below a number of options are set
 	
-	$result = curl_exec($ch); // execute curl post and set reponse variable
-	curl_close($ch); // close curl
+	curl_setopt($ch, CURLOPT_URL, $post_url); 
+	// assign url to curl post
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+	// make sure a response is returned
+	curl_setopt($ch, CURLOPT_TIMEOUT, 30); 
+	// set timeout before process is killed
+	
+	$result = curl_exec($ch); 
+	// execute curl post and set $result as the response variable
+	curl_close($ch); 
+	// end the curl process
 	
 	return $result;
+	/* 
+	by returning the response variable, our output from the function will be whatever data 
+	the webservice returns, ie.: XML, JSON, etc.
+	*/
 }
 ?>
